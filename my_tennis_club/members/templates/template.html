@@ -3,16 +3,13 @@
 
 <body>
 
-  {% if greeting == 1 %}
-  <h1>Hello</h1>
-  {% elif greeting == 2 %}
-  <h1>Welcome</h1>
-  {% else %}
-  <h1>Goodbye</h1>
-  {% endif %}
+  {% for x in cars %}
+  <h1>{{ x.brand }}</h1>
+  <p>{{ x.model }}</p>
+  <p>{{ x.year }}</p>
+  {% endfor %}
 
-
-  <p>In views.py you can see how to import and fetch members from the database.</p>
+  <p>In views.py you can see what the cars variable looks like.</p>
 
 </body>
 

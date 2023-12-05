@@ -25,6 +25,21 @@ def main(request):
 def testing(request):
   template = loader.get_template('template.html')
   context = {
-    'greeting': 1,
-  }
+    'cars': [
+      {
+        'brand': 'Ford',
+        'model': 'Mustang',
+        'year': '1964',
+      },
+      {
+        'brand': 'Ford',
+        'model': 'Bronco',
+        'year': '1970',
+      },
+      {
+        'brand': 'Volvo',
+        'model': 'P1800',
+        'year': '1964',
+      }]
+    }
   return HttpResponse(template.render(context, request))  
