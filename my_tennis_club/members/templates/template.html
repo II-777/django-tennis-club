@@ -3,16 +3,15 @@
 
 <body>
 
-  {% for x in members reversed %}
-  <h1>{{ x.id }}</h1>
-  <p>
-    {{ x.firstname }}
-    {{ x.lastname }}
-  </p>
-  {% endfor %}
+  <ul>
+    {% for x in emptytestobject %}
+    <li>{{ x.firstname }}</li>
+    {% empty %}
+    <li>No members</li>
+    {% endfor %}
+  </ul>
 
-
-<p>In views.py you can see how to import and fetch members from the database.</p>
+  <p>In views.py you can see the emptytestobject.</p>
 
 </body>
 
