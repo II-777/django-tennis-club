@@ -3,15 +3,11 @@
 
 <body>
 
-  <ul>
-    {% for x in myobject %}
-    <li>{{ x.firstname }}</li>
-    {% empty %}
-    <li>No members</li>
-    {% endfor %}
-  </ul>
+  {% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
 
-  <p>In views.py you can see that there is no myobject variable.</p>
+  <h1>Welcome</h1>
+
+  <p>This is my webpage</p>
 
 </body>
 
