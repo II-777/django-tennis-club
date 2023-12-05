@@ -23,7 +23,7 @@ def main(request):
   return HttpResponse(template.render())
 
 def testing(request):
-  mydata = Member.objects.filter(firstname='Emil').values()
+  mydata = Member.objects.filter(lastname='Refsnes', id=2).values()
   template = loader.get_template('template.html')
   context = {
     'mymembers': mydata,
