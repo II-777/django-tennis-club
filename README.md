@@ -1,1 +1,1 @@
-## w3s-django-tennis-club
+## Django Tennis Club
